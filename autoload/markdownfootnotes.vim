@@ -134,10 +134,10 @@ function! markdownfootnotes#VimFootnotes(appendcmd)
 		let g:vimfootnotemark = <sid>VimFootnoteType(g:vimfootnotenumber)
 		let cr = "\<cr>"
 	endif
-	exe "normal ".a:appendcmd."[^".g:vimfootnotemark."]\<esc>" 
+	exe "normal ".a:appendcmd."<sup>[[#".g:vimfootnotemark."]]</sup>\<esc>" 
 	:below 4split
 	normal G
-	exe "normal o".cr."[^".g:vimfootnotemark."]: "
+	exe "normal o".cr."* *".g:vimfootnotemark."*: "
 	startinsert!
 endfunction
 
