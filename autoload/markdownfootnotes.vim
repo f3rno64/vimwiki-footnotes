@@ -127,11 +127,11 @@ endfunction
 function! markdownfootnotes#VimFootnotes(appendcmd)
 	if (g:vimfootnotenumber != 0)
 		let g:vimfootnotenumber = g:vimfootnotenumber + 1
-		let g:vimfootnotemark = <sid>VimFootnoteType(g:vimfootnotenumber)
+		let g:vimfootnotemark = markdownfootnotes#VimFootnoteType(g:vimfootnotenumber)
 		let cr = "\<cr>"
 	else
 		let g:vimfootnotenumber = 1
-		let g:vimfootnotemark = <sid>VimFootnoteType(g:vimfootnotenumber)
+		let g:vimfootnotemark = markdownfootnotes#VimFootnoteType(g:vimfootnotenumber)
 		let cr = "\<cr>"
 	endif
 	exe "normal ".a:appendcmd."<sup>[[#".g:vimfootnotemark."]]</sup>\<esc>" 
