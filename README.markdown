@@ -1,24 +1,19 @@
-## VimFootnotes for Markdown
+## Footnotes for vimwiki
 
-This fork is a slight tweak of the venerable [vimfootnotes][], for use with
+~~This fork is a slight tweak of the venerable [vimfootnotes][], for use with
 extended markdown( Whereas the original script inserts footnotes that look like
-this
+this~~
+
+This fork of a fork is a slight tweak to adapt to vimwiki's syntax.
+**beware**: I may prepare a pull request for [Konfekt's fork](https://github.com/Konfekt/vim-markdownfootnotes) at some point.
+
+For vimwiki, it a footnote mark would look like this:
 
 ~~~
-Here is some text.[1]
+Here is some text.<sup>[[#1]]</sup>
 
-[1] Here is a note.
+* *1*: Here is a note.
 ~~~
-
-the new script inserts footnotes in the widely supported extended
-markdown syntax,
-
-~~~
-Here is some text.[^1]
-
-[^1]: Here is a note.
-~~~
-)
 
 To insert a footnote, hit `<Leader>f` in normal mode or type `[]`. Then
 
@@ -28,13 +23,11 @@ To insert a footnote, hit `<Leader>f` in normal mode or type `[]`. Then
 
 When done, type `ZZ` to close the split and return to the main text.
 
-![Screenshot](https://raw.github.com/vim-pandoc/vim-markdownfootnotes/master/footnotes.png)
-
 ## Installation
 
-Drop `markdownfootnotes.vim` in your plugin directory.
+Drop `vimwiki-footnotes.vim` in your plugin directory.
 
-Or use [Pathogen](https://github.com/tpope/vim-pathogen).
+(Tip: use [minpac](https://github.com/k-takata/minpac))
 
 ## Settings
 
